@@ -6,7 +6,7 @@
     --Light-gray: hsl(0, 0%, 81%);
     --Light-grayish-blue: hsl(210, 46%, 95%);
 
-    --fs: 0.5rem;
+    --fs: 0.7rem;
     --ff: 'Barlow Semi Condensed', sans-serif;
     --fw-500: 500;
     --fw-600: 600;
@@ -165,7 +165,7 @@ article h2{
 }
 @media(min-width:40em){
   :root{
-    --fs: 0.4rem;
+    --fs: 0.5rem;
   }
   article{
     padding: 0.5rem;
