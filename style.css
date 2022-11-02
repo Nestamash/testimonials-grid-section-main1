@@ -6,8 +6,7 @@
     --Light-gray: hsl(0, 0%, 81%);
     --Light-grayish-blue: hsl(210, 46%, 95%);
 
-    /* --fs: 0.88rem; */
-    --fs-2: 13px;
+    --fs: 0.5rem;
     --ff: 'Barlow Semi Condensed', sans-serif;
     --fw-500: 500;
     --fw-600: 600;
@@ -37,12 +36,12 @@ ol {
 html:focus-within {
   scroll-behavior: smooth;
 }
-html, body {
+html{
   height: 100%;
 }
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  min-height: 100%;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -66,23 +65,22 @@ select {
 /* styling the cards */
 body{
   font-family: var(--ff);
-  font-size: var(--fs-2);
+  font-size: var(--fs);
   font-weight: var(--fw-500);
-  min-height: 100vh;
   display: grid;
   place-content: center;
   background-color: var(--Light-grayish-blue);
 }
 main{
-  width: min(95%, 70em);
+  
   display: grid;
-  gap: 1rem;
-  margin-inline: auto;
+  gap: 0.5rem;
+  margin: 0.5rem;
   background-color: var(--Light-grayish-blue);
 }
 article{
-  padding: 2rem;
-  border-radius: 10px;
+  padding: 1rem;
+  border-radius: 5px;
 }
 .card-daniel{
   background-color: var(--Moderate-violet);
@@ -105,16 +103,16 @@ figure{
   align-items: center;
 }
 figure img{
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
  
 }
 figcaption{
-  padding-left: 1rem;
+  padding-left: 0.5rem;
 }
 figcaption h1{
-  
+  font-size: var(--fs);
   color: var(--White);
 }
 figcaption p{
@@ -123,7 +121,7 @@ figcaption p{
 }
 article h2{
   padding-bottom: 1rem;
-  /* font-size: 1.3rem; */
+  font-size: var(--fs);
   font-weight: var(--fw-600);
   color: var(--White);
 }
@@ -151,22 +149,37 @@ article h2{
 
 /* footer */
 .attribution { 
-    font-size: 11px; 
-    text-align: center; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    height: 100px;
+    font-size: 9px; 
+     
+    margin-top: auto;
+    /* background-color: var(--Moderate-violet); */
+    color: black;
 }
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: var(--Moderate-violet);
+    opacity: 50%; 
 }
 @media(min-width:40em){
-  main{
-   
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-template-areas: 
-    "dan dan walters kira"
-    "harmon patrick patrick kira"; */
+  :root{
+    --fs: 0.4rem;
+  }
+  article{
+    padding: 0.5rem;
     
   }
-  /* .card-daniel{
+  main{
+   
+    grid-template-columns: repeat(4, 150px);
+    grid-template-areas: 
+    "dan dan walters kira"
+    "harmon patrick patrick kira"; 
+    
+  }
+  .card-daniel{
     grid-area: dan;
   }
   .card-harmon{
@@ -180,5 +193,5 @@ article h2{
   }
   .card-walters{
     grid-area: walters;
-  } */
+  }
 }
